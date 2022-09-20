@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## This is a web application for users to search google books and save a book list. The app is located on Heroku at [https://google-book-search-gdw.herokuapp.com/](https://google-book-search-gdw.herokuapp.com/.
+## This is a web application for users to search google books and save a book list. The app is located on Heroku at [https://google-book-search-gdw.herokuapp.com/].
 
 ## Table of Contents:
 
@@ -30,13 +30,13 @@ Use the live app on Heroku: [https://google-book-search-gdw.herokuapp.com/](http
 
 ## Screenshots
 
-|        <b>Image running on a computer</b>         |
-| :-----------------------------------------------: |
-| ![space-1.jpg](./client/images/Screenshotweb.jpg) |
+|            <b>Image running on a computer</b>            |
+| :------------------------------------------------------: |
+| ![space-1.jpg](./client/public/images/Screenshotweb.jpg) |
 
-|           <b>Image running on a mobile</b>           |
-| :--------------------------------------------------: |
-| ![space-2.jpg](./client/images/Screenshotmobile.jpg) |
+|              <b>Image running on a mobile</b>               |
+| :---------------------------------------------------------: |
+| ![space-2.jpg](./client/public/images/Screenshotmobile.jpg) |
 
 ## License
 
