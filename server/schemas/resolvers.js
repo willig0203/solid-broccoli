@@ -10,7 +10,6 @@ const resolvers = {
         const userData = await User.findOne({ _id: context.user._id })
           .select("-__v -password")
           .populate("savedBooks");
-        // .populate("authers");
         return userData;
       }
       throw new AuthenticationError("Not logged in");
@@ -20,7 +19,6 @@ const resolvers = {
       const userData = await User.find()
         .select("-__v -password")
         .populate("savedBooks");
-      //   .populate("authors")
       return userData;
     },
     // get a user by username
@@ -28,7 +26,6 @@ const resolvers = {
       const userData = await User.findOne({ username })
         .select("-__v -password")
         .populate("savedBooks");
-      // .populate("authers");
       return userData;
     },
   },
@@ -58,7 +55,6 @@ const resolvers = {
     },
 
     saveBook: async (parent, { bookData }, context) => {
-      console.log("saveBook " + context.user);
       if (context.user) {
         const savedBook = await User.findByIdAndUpdate(
           { _id: context.user._id },
