@@ -56,8 +56,9 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
-    // saveBook(id: ID!, input: BookInput!): User
+
     saveBook: async (parent, { bookData }, context) => {
+      console.log("saveBook " + context.user);
       if (context.user) {
         const savedBook = await User.findByIdAndUpdate(
           { _id: context.user._id },
