@@ -17,16 +17,16 @@ const resolvers = {
     },
     // get all users
     users: async () => {
-      const userData = await User.find()
-        .select("-__v -password")
-        .populate("savedBooks");
+      const userData = await User.find().select("-__v -password");
+      // .populate("savedBooks");
       return userData;
     },
     // get a user by username
     user: async (parent, { username }) => {
-      const userData = await User.findOne({ username })
-        .select("-__v -password")
-        .populate("savedBooks");
+      const userData = await User.findOne({ username }).select(
+        "-__v -password"
+      );
+      // .populate("savedBooks");
       return userData;
     },
   },
@@ -37,6 +37,7 @@ const resolvers = {
       const token = signToken(user);
 
       return { token, user };
+      // TODO: should be logged in after this but instead have to login!
     },
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
@@ -67,7 +68,7 @@ const resolvers = {
       }
       throw new AuthenticationError("You need to be logged in");
     },
-    // removeBook(id: ID!, bookId: String!): User
+    // removeBook(bookId: String!): User
     removeBook: async (parent, { bookId }, context) => {
       if (context.user) {
         const removeBook = await User.findByIdAndUpdate(
