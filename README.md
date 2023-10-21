@@ -40,7 +40,7 @@ Use the live app on Heroku: [https://google-book-search-gdw.herokuapp.com/](http
 
 ## License
 
-&copy; 2023 by Gary Williams (Trademark GarywareLLC).
+&copy; 2023 by Gary Williams (GarywareLLC).
 This project is licensed under the MIT license.
 https://opensource.org/licenses/MIT
 
